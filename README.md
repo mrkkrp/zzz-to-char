@@ -1,6 +1,7 @@
 # Zzz to Char
 
 [![License GPL 3](https://img.shields.io/badge/license-GPL_3-green.svg)](http://www.gnu.org/licenses/gpl-3.0.txt)
+[![Build Status](https://travis-ci.org/mrkkrp/zzz-to-char.svg?branch=master)](https://travis-ci.org/mrkkrp/zzz-to-char)
 
 This package provides two new commands: `zzz-to-char` and `zzz-up-to-char`
 which work like built-ins `zap-to-char` and `zap-up-to-char`, but allow you
