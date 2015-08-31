@@ -94,7 +94,7 @@ character too."
 
 This command is similar to `zap-up-to-char', it doesn't kill
 target character."
-  (interactive (list (read-char "Zzz to: " t)))
+  (interactive (list (read-char "Zzz up to: " t)))
   (zzz-to-char--base char 1))
 
 (provide 'zzz-to-char)
