@@ -79,6 +79,7 @@ This is internal function, see also `zzz-to-char' and
           (goto-char end)
           (kill-region beg end))))))
 
+;;;###autoload
 (defun zzz-to-char (char)
   "Kill text between the point and the character CHAR.
 
@@ -87,6 +88,7 @@ character too."
   (interactive (list (read-char "Zzz to: " t)))
   (zzz-to-char--base char 0))
 
+;;;###autoload
 (defun zzz-up-to-char (char)
   "Kill text between the point and the character CHAR.
 
