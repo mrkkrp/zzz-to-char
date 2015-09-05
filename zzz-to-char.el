@@ -44,7 +44,10 @@
 
 (defgroup zzz-to-char nil
   "Fancy version of `zap-to-char' command."
-  :group 'convenience)
+  :group  'convenience
+  :tag    "Zzz to Char"
+  :prefix "zzz-to-char-"
+  :link   '(url-link :tag "GitHub" "https://github.com/mrkkrp/zzz-to-char"))
 
 (defcustom zzz-to-char-reach 80
   "Number of characters to scan on each side of the point."
