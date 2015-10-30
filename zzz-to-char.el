@@ -71,8 +71,10 @@ This is internal function, see also `zzz-to-char' and
          (regexp-quote (string char)))
        nil
        avy-style
-       (- p zzz-to-char-reach)
-       (+ p zzz-to-char-reach)))
+       (max (- p zzz-to-char-reach)
+            (point-min))
+       (min (+ p zzz-to-char-reach)
+            (point-max))))
     (let ((n (point)))
       (when (/= n p)
         (cl-destructuring-bind (beg . end)
