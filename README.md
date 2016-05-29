@@ -1,7 +1,7 @@
 # Zzz to Char
 
 [![License GPL 3](https://img.shields.io/badge/license-GPL_3-green.svg)](http://www.gnu.org/licenses/gpl-3.0.txt)
-[![MELPA](http://melpa.org/packages/zzz-to-char-badge.svg)](http://melpa.org/#/zzz-to-char)
+[![MELPA](https://melpa.org/packages/zzz-to-char-badge.svg)](https://melpa.org/#/zzz-to-char)
 [![Build Status](https://travis-ci.org/mrkkrp/zzz-to-char.svg?branch=master)](https://travis-ci.org/mrkkrp/zzz-to-char)
 
 This package provides two new commands: `zzz-to-char` and `zzz-up-to-char`
