@@ -34,8 +34,6 @@
 ;; there is only one occurrence of target character (except they
 ;; automatically work in backward direction too). You can also specify how
 ;; many characters to scan from each side of point, see `zzz-to-char-reach'.
-;;
-;; This package uses avy as backend.
 
 ;;; Code:
 
@@ -55,12 +53,12 @@
   :type 'integer)
 
 (defun zzz-to-char--base (char n-shift)
-  "Kill text between the pont and character CHAR.
+  "Kill text between the point and character CHAR.
 
 Boundary of text to kill that doesn't coincide with point
 position can be shifted with help of N-SHIFT argument.
 
-This is internal function, see also `zzz-to-char' and
+This is an internal function, see also `zzz-to-char' and
 `zzz-up-to-char'."
   (let ((p (point))
         (avy-all-windows nil))
