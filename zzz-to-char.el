@@ -68,7 +68,6 @@ This is an internal function, see also `zzz-to-char' and
            "\n"
          (regexp-quote (string char)))
        nil
-       avy-style
        (max (- p zzz-to-char-reach)
             (point-min))
        (min (+ p zzz-to-char-reach)
