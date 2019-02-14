@@ -63,7 +63,7 @@ This is an internal function, see also `zzz-to-char' and
   (let ((p (point))
         (avy-all-windows nil))
     (avy-with zzz-to-char
-      (avy--generic-jump
+      (avy-jump
        (if (= 13 char)
            "\n"
          (regexp-quote (string char)))
