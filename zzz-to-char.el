@@ -67,11 +67,11 @@ This is an internal function, see also `zzz-to-char' and
        (if (= 13 char)
            "\n"
          (regexp-quote (string char)))
-       nil
-       (max (- p zzz-to-char-reach)
-            (point-min))
-       (min (+ p zzz-to-char-reach)
-            (point-max))))
+       :window-flip nil
+       :beg (max (- p zzz-to-char-reach)
+                 (point-min))
+       :end (min (+ p zzz-to-char-reach)
+                 (point-max))))
     (let ((n (point)))
       (when (/= n p)
         (cl-destructuring-bind (beg . end)
