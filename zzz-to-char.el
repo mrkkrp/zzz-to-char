@@ -1,6 +1,6 @@
 ;;; zzz-to-char.el --- Fancy version of `zap-to-char' command -*- lexical-binding: t; -*-
 ;;
-;; Copyright © 2015–2019 Mark Karpov <markkarpov92@gmail.com>
+;; Copyright © 2015–present Mark Karpov <markkarpov92@gmail.com>
 ;;
 ;; Author: Mark Karpov <markkarpov92@gmail.com>
 ;; URL: https://github.com/mrkkrp/zzz-to-char
