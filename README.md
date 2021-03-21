@@ -5,26 +5,30 @@
 ![CI](https://github.com/mrkkrp/zzz-to-char/workflows/CI/badge.svg?branch=master)
 
 This package provides two new commands: `zzz-to-char` and `zzz-up-to-char`
-which work like built-ins `zap-to-char` and `zap-up-to-char`, but allow you
-quickly select exact character you want to “zzz” to.
-
-The commands are minimalistic and often work like built-in ones when there
-is only one occurrence of the target character (except they automatically
-work in backward direction too). You can also specify how many characters to
-scan from each side of point, see `zzz-to-char-reach`.
+which work like the built-ins `zap-to-char` and `zap-up-to-char`, but allow
+the user to quickly select the exact character they want to zzz to. The
+commands work like the built-ins when there is only one occurrence of the
+target character, excepting that they automatically work in the backward
+direction, too. One can specify how many characters to scan from each side
+of the point, see `zzz-to-char-reach`.
 
 ## Installation
 
-Download this package and place it somewhere, so Emacs can see it. Then put
-`(require 'zzz-to-char)` into your configuration file. Done!
+The package is available via MELPA, so you can just type `M-x
+package-install RET zzz-to-char RET`.
 
-To install the package via MELPA, execute: <kbd>M-x package-install RET
-zzz-to-char RET</kbd>.
+If you would like to install the package manually, download or clone it and
+put on Emacs' `load-path`. Then you can require it in your init file like
+this:
+
+```emacs-lisp
+(require 'zzz-to-char)
+```
 
 ## Usage
 
 Just bind `zzz-to-char` or `zzz-up-to-char` (depends on your taste, the
-latter doesn't include target char into killed text):
+latter doesn't include the target char into the killed text):
 
 ```emacs-lisp
 (global-set-key (kbd "M-z") #'zzz-to-char)

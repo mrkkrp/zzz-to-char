@@ -26,14 +26,13 @@
 ;;; Commentary:
 
 ;; This package provides two new commands: `zzz-to-char' and
-;; `zzz-up-to-char' which work like built-ins `zap-to-char' and
-;; `zap-up-to-char', but allow you quickly select exact character you want
-;; to “zzz” to.
-;;
-;; The commands are minimalistic and often work like built-in ones when
-;; there is only one occurrence of target character (except they
-;; automatically work in backward direction too). You can also specify how
-;; many characters to scan from each side of point, see `zzz-to-char-reach'.
+;; `zzz-up-to-char' which work like the built-ins `zap-to-char' and
+;; `zap-up-to-char', but allow the user to quickly select the exact
+;; character they want to zzz to.  The commands work like the built-ins when
+;; there is only one occurrence of the target character, excepting that they
+;; automatically work in the backward direction, too.  One can specify how
+;; many characters to scan from each side of the point, see
+;; `zzz-to-char-reach'.
 
 ;;; Code:
 
@@ -41,9 +40,9 @@
 (require 'cl-lib)
 
 (defgroup zzz-to-char nil
-  "Fancy version of `zap-to-char' command."
+  "A fancy version of `zap-to-char' command."
   :group  'convenience
-  :tag    "Zzz to Char"
+  :tag    "Zzz to char"
   :prefix "zzz-to-char-"
   :link   '(url-link :tag "GitHub" "https://github.com/mrkkrp/zzz-to-char"))
 
@@ -53,10 +52,10 @@
   :type 'integer)
 
 (defun zzz-to-char--base (char n-shift)
-  "Kill text between the point and character CHAR.
+  "Kill text between the point and the character CHAR.
 
 Boundary of text to kill that doesn't coincide with point
-position can be shifted with help of N-SHIFT argument.
+position can be shifted with help of the N-SHIFT argument.
 
 This is an internal function, see also `zzz-to-char' and
 `zzz-up-to-char'."
@@ -85,7 +84,7 @@ This is an internal function, see also `zzz-to-char' and
 (defun zzz-to-char (char)
   "Kill text between the point and the character CHAR.
 
-This command is similar to `zap-to-char', it kills target
+This command is similar to `zap-to-char', it kills the target
 character too."
   (interactive (list (read-char "Zzz to: " t)))
   (zzz-to-char--base char 0))
@@ -94,7 +93,7 @@ character too."
 (defun zzz-up-to-char (char)
   "Kill text between the point and the character CHAR.
 
-This command is similar to `zap-up-to-char', it doesn't kill
+This command is similar to `zap-up-to-char', it doesn't kill the
 target character."
   (interactive (list (read-char "Zzz up to: " t)))
   (zzz-to-char--base char 1))
