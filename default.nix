@@ -8,10 +8,12 @@ pkgs.stdenv.mkDerivation {
   name = "zzz-to-char";
   src = source;
   buildInputs = [
-    (pkgs.emacs26WithPackages (epkgs: [epkgs.avy]))
+    (pkgs.emacs28WithPackages (epkgs: [epkgs.avy]))
   ];
   buildPhase = ''
-    emacs -L . --batch -f batch-byte-compile *.el
+    emacs -L . --batch -f batch-byte-compile *.el 2> stderr.txt
+    cat stderr.txt
+    ! grep -q ': Warning:' stderr.txt
   '';
   installPhase = ''
     LISPDIR=$out/share/emacs/site-lisp
