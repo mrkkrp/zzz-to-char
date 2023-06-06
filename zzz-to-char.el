@@ -4,7 +4,7 @@
 ;;
 ;; Author: Mark Karpov <markkarpov92@gmail.com>
 ;; URL: https://github.com/mrkkrp/zzz-to-char
-;; Version: 0.1.3
+;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.4") (avy "0.3.0"))
 ;; Keywords: convenience
 ;;
@@ -90,7 +90,7 @@ character too."
   (zzz-to-char--base char 0))
 
 ;;;###autoload
-(defun zzz-up-to-char (char)
+(defun zzz-to-char-up-to-char (char)
   "Kill text between the point and the character CHAR.
 
 This command is similar to `zap-up-to-char', it doesn't kill the

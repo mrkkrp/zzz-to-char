@@ -27,8 +27,8 @@ this:
 
 ## Usage
 
-Just bind `zzz-to-char` or `zzz-up-to-char` (depends on your taste, the
-latter doesn't include the target char into the killed text):
+Just bind `zzz-to-char` or `zzz-to-char-up-to-char` (depends on your taste,
+the latter doesn't include the target char into the killed text):
 
 ```emacs-lisp
 (global-set-key (kbd "M-z") #'zzz-to-char)
