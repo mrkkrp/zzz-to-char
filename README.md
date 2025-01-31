@@ -2,7 +2,7 @@
 
 [![License GPL 3](https://img.shields.io/badge/license-GPL_3-green.svg)](http://www.gnu.org/licenses/gpl-3.0.txt)
 [![MELPA](https://melpa.org/packages/zzz-to-char-badge.svg)](https://melpa.org/#/zzz-to-char)
-![CI](https://github.com/mrkkrp/zzz-to-char/workflows/CI/badge.svg?branch=master)
+[![CI](https://github.com/mrkkrp/zzz-to-char/actions/workflows/ci.yaml/badge.svg)](https://github.com/mrkkrp/zzz-to-char/actions/workflows/ci.yaml)
 
 This package provides two new commands: `zzz-to-char` and `zzz-up-to-char`
 which work like the built-ins `zap-to-char` and `zap-up-to-char`, but allow
