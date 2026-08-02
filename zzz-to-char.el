@@ -26,7 +26,7 @@
 ;;; Commentary:
 
 ;; This package provides two new commands: `zzz-to-char' and
-;; `zzz-up-to-char' which work like the built-ins `zap-to-char' and
+;; `zzz-to-char-up-to-char', which work like the built-ins `zap-to-char' and
 ;; `zap-up-to-char', but allow the user to quickly select the exact
 ;; character they want to zzz to.  The commands work like the built-ins when
 ;; there is only one occurrence of the target character, excepting that they
@@ -58,7 +58,7 @@ Boundary of text to kill that doesn't coincide with point
 position can be shifted with help of the N-SHIFT argument.
 
 This is an internal function, see also `zzz-to-char' and
-`zzz-up-to-char'."
+`zzz-to-char-up-to-char'."
   (let ((p (point))
         (avy-all-windows nil))
     (avy-with zzz-to-char
@@ -85,7 +85,7 @@ This is an internal function, see also `zzz-to-char' and
 (defun zzz-to-char (char)
   "Kill text between the point and the character CHAR.
 
-This command is similar to `zap-to-char', it kills the target
+This command is similar to `zap-to-char'; it kills the target
 character too."
   (interactive (list (read-char "Zzz to: " t)))
   (zzz-to-char--base char 0))
@@ -94,7 +94,7 @@ character too."
 (defun zzz-to-char-up-to-char (char)
   "Kill text between the point and the character CHAR.
 
-This command is similar to `zap-up-to-char', it doesn't kill the
+This command is similar to `zap-up-to-char'; it doesn't kill the
 target character."
   (interactive (list (read-char "Zzz up to: " t)))
   (zzz-to-char--base char 1))
